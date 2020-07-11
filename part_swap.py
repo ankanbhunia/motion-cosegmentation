@@ -141,9 +141,9 @@ def load_face_parser(cpu=False):
     face_parser = BiSeNet(n_classes=19)
     if not cpu:
        face_parser.cuda()
-       face_parser.load_state_dict(torch.load('face_parsing/cp/79999_iter.pth'))
+       face_parser.load_state_dict(torch.load('/content/motion-co-seg/face_parsing/cp/79999_iter.pth'))
     else:
-       face_parser.load_state_dict(torch.load('face_parsing/cp/79999_iter.pth', map_location=torch.device('cpu')))
+       face_parser.load_state_dict(torch.load('/content/motion-co-seg/face_parsing/cp/79999_iter.pth', map_location=torch.device('cpu')))
  
     face_parser.eval()
 
